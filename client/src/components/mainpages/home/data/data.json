@@ -1,0 +1,82 @@
+{
+  "Header": {
+    "title": "Welcome to Our E-Commerce Store",
+    "paragraph": "Explore a wide range of products from top brands. Shop with confidence!"
+  },
+  "About": {
+    "paragraph": "Discover the best online shopping experience with our e-commerce store. We bring you high-quality products at unbeatable prices. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Why": [
+      "Wide Selection of Products",
+      "Secure Online Payments",
+      "Fast and Reliable Shipping",
+      "Dedicated Customer Support"
+    ],
+    "Why2": [
+      "Quality Guaranteed",
+      "Easy Returns and Refunds",
+      "Exclusive Deals and Discounts",
+      "User-Friendly Website"
+    ]
+  },
+  "Services": [
+    {
+      "icon": "fa fa-shopping-basket justify-content-center",
+      "name": "Wide Variety",
+      "text": "Explore a wide variety of fresh fruits, vegetables, and grocery items for your daily needs."
+    },
+    {
+      "icon": "fa fa-clock-o justify-content-center",
+      "name": "Fast Delivery",
+      "text": "Enjoy fast and reliable home delivery services, ensuring your orders reach you promptly."
+    },
+    {
+      "icon": "fa fa-credit-card justify-content-center",
+      "name": "Secure Payments",
+      "text": "Make secure online payments, providing you with a hassle-free and safe shopping experience."
+    },
+    {
+      "icon": "fa fa-refresh justify-content-center",
+      "name": "Fresh Guarantee",
+      "text": "Our commitment to freshness ensures that you receive the highest quality produce every time."
+    }
+  ],
+    "Testimonials": [
+      {
+        "img": "images/testimonials/anwesh.jpeg",
+        "text": "\"Amazing shopping experience!\"",
+        "name": "Anwedh K. Mohanty"
+      },
+      {
+        "img": "images/testimonials/jkha.jpeg",
+        "text": "\"I love the site.\"",
+        "name": "Aayush Jha"
+      },
+      {
+        "img": "images/testimonials/Abhinav.jpeg",
+        "text": "\"Great service. Highly recommend!\"",
+        "name": "Abhinav Agarwal"
+      }
+    ],
+    "Team": [
+      {
+        "img": "images/team/01.jpeg",
+        "name": "Eshanth Patyal"
+      },
+      {
+        "img": "images/team/02.jpg",
+        "name": "Harsh Gupta"
+      },
+      {
+        "img": "images/team/03.jpeg",
+        "name": "Yash R Khandelwal"
+      },
+      {
+        "img": "images/team/04.jpeg",
+        "name": "Harsh Agarwal"
+      },
+      {
+        "img": "images/team/05.jpeg",
+        "name": "Hardik Parakh"
+      }
+    ]
+  }

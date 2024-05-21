@@ -1,0 +1,125 @@
+.create_product {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.upload {
+    max-width: 450px;
+    height: 500px;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px;
+    position: relative;
+}
+
+#file_up {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+#file_up::before {
+    content: "+";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+    color: rgb(250, 200, 107);
+    font-size: 5rem; /* Adjusted font size */
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#file_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#file_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#file_img span {
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-weight: 900;
+    color: crimson;
+}
+
+.create_product form {
+    max-width: 500px;
+    min-width: 290px;
+    width: 100%;
+    margin: 15px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.create_product form label {
+    color: #333; /* Adjusted label color */
+    font-size: 1rem; /* Adjusted font size */
+    margin-bottom: 5px; /* Added margin bottom */
+}
+
+.create_product form .row {
+    width: 100%;
+    margin: 15px 0;
+    margin-left: 0; /* Removed left margin */
+    display: flex;
+    flex-direction: column;
+}
+
+.create_product form input,
+.create_product form textarea {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px; /* Added more padding */
+    margin-bottom: 10px; /* Added margin bottom */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.create_product form button {
+    width: 200px;
+    height: 40px;
+    background: #4caf50; /* Green background color */
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+.create_product form button:hover {
+    background: #45a049; /* Darker green on hover */
+}
