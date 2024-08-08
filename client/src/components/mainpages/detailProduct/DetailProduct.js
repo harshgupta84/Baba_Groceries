@@ -4,32 +4,31 @@ import { GlobalState } from "../../../GlobalState";
 import ProductItem from "../utils/productItem/ProductItem";
 
 function DetailProduct() {
-  const params = useParams();
-  const state = useContext(GlobalState);
-  const [products] = state.productsAPI.products;
-  const addCart = state.userAPI.addCart;
-  const [detailProduct, setDetailProduct] = useState([]);
+  const { id } = useParams();
+  const { productsAPI, userAPI } = useContext(GlobalState);
+  const [products] = productsAPI.products;
+  const addCart = userAPI.addCart;
+  const [detailProduct, setDetailProduct] = useState(null);
 
   useEffect(() => {
-    if (params.id) {
-      products.forEach((product) => {
-        if (product._id === params.id) setDetailProduct(product);
-      });
+    if (id) {
+      const product = products.find((product) => product._id === id);
+      setDetailProduct(product || {});
     }
-  }, [params.id, products]);
+  }, [id, products]);
 
-  if (detailProduct.length === 0) return null;
+  if (!detailProduct) return null;
 
   return (
     <>
       <div className="detail">
-        <img src={detailProduct.images.url} alt="" />
+        <img src={detailProduct.images?.url} alt={detailProduct.title} />
         <div className="box-detail">
           <div className="row">
             <h2>{detailProduct.title}</h2>
             <h6>#id: {detailProduct.product_id}</h6>
           </div>
-          <span> ₹ {detailProduct.price}</span>
+          <span>₹ {detailProduct.price}</span>
 
           <div className="section-heading">
             <h3>Description</h3>
@@ -54,13 +53,13 @@ function DetailProduct() {
       </div>
 
       <div>
-        <h2>Related products</h2>
+        <h2>Related Products</h2>
         <div className="products">
-          {products.map((product) =>
-            product.category === detailProduct.category ? (
+          {products
+            .filter(product => product.category === detailProduct.category)
+            .map(product => (
               <ProductItem key={product._id} product={product} />
-            ) : null
-          )}
+            ))}
         </div>
       </div>
     </>
